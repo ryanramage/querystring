@@ -5,7 +5,7 @@ if (typeof define !== 'function') {
 define(function(require) {
 
 var _ = require('underscore')._;
-
+var QueryString = {};
 /**
  * Querystring functions ported from node.js to work in CouchDB and the browser.
  * This module is used internally by Kanso, although you can use it in your
@@ -38,7 +38,6 @@ var _ = require('underscore')._;
 
 // Query String Utilities
 
-var QueryString = exports;
 
 /**
  * Decodes a URI Component, provided so that it could be overridden if
@@ -185,4 +184,5 @@ QueryString.parse = QueryString.decode = function (qs, sep, eq) {
     return obj;
 };
 
+    return QueryString;
 });
