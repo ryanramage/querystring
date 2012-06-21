@@ -2,7 +2,7 @@ if (typeof define !== 'function') {
     var define = require('amdefine')(module);
 }
 
-define(function(require) {
+define(['require', 'underscore'],function(require) {
 
 var _ = require('underscore')._;
 var QueryString = {};
